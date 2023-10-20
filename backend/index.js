@@ -65,41 +65,13 @@ const totalresult =  data.bio + data.che + data.math + data.eng
 
 
 
-async function getAll(req,res){
-const data = await resultcollection.find({});
 
-
-//  console.log(data)
-
-//  if(data){
-
-// const totalresult =  data.bio + data.che + data.math + data.eng
-
-//   let allhtmlcontent =  htmlcontent.replace('{{%bio%}}',data.bio)
-//           allhtmlcontent = allhtmlcontent.replace('{{%che%}}',data.che)
-//           allhtmlcontent = allhtmlcontent.replace('{{%math%}}',data.math)
-//           allhtmlcontent = allhtmlcontent.replace('{{%eng%}}',data.eng)
-//           allhtmlcontent = allhtmlcontent.replace('{{%total%}}',(totalresult))
-//      if(totalresult < 200)
-//      allhtmlcontent = allhtmlcontent.replace('{{}}',`haha you got ${totalresult} /400 you are stupid`)
-//    else
-//    allhtmlcontent = allhtmlcontent.replace('{{}}',``)
-
-
-
-
-          res.send(data.length)
-//  }
-//  else{
-//    res.send('id is not found')
-//  }
-}
 
 
 app.use(express.static('./public'))
 
 app.get("/get",get)
-app.get('/get/all',getAll)
+
 
 
 async function post(req,res){
@@ -139,6 +111,6 @@ app.post('/post',post)
 
 
 
-app.listen(5000,()=>{
-    console.log(`srver is running ${5000}`)
+app.listen(process.env.PORT,()=>{
+    console.log(`srver is running ${process.env.PORT}`)
 })
