@@ -139,6 +139,6 @@ app.post('/post',post)
 
 
 
-app.listen(process.env.PORT,()=>{
-    console.log(`srver is running ${process.env.PORT}`)
+app.listen(5000,()=>{
+    console.log(`srver is running ${5000}`)
 })
