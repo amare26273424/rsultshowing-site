@@ -1,9 +1,10 @@
 *{
     color:white;
   }
-  /* body{
-   padding: 0 0;
-  } */
+   body{
+ 
+   margin: 0% 0%;
+  } 
    section{
        
         width: 100%;
@@ -16,8 +17,8 @@
        }
       .div1{
         background-color: rgba(65, 105, 225, 0.948);
-        width: 400px;
-        height: 300px;
+        max-width: 400px;
+        max-height: 300px;
         border-radius: 30px;
         padding: 30px;
       }

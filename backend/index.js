@@ -37,7 +37,7 @@ async function get(req,res){
 
 const data = await resultcollection.findOne({idnumber:id});
 
- console.log(data)
+
 
  if(data){
 
